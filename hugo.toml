@@ -1,0 +1,43 @@
+baseURL = "https://example.com/"
+languageCode = "ko"
+title = "Scripton Cloud Hugo Example"
+theme = "PaperMod"
+canonifyURLs = true
+
+# Hugo 빌드 설정
+buildDrafts = true
+buildFuture = false
+buildExpired = false
+
+[pagination]
+  pagerSize = 10
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[menu]
+
+[[menu.main]]
+  name = "블로그"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  name = "소개"
+  url = "/about/"
+  weight = 20
+
+[params]
+  defaultTheme = "auto"
+  showReadingTime = true
+  showPostNavLinks = true
+  showShareButtons = true
+  showBreadCrumbs = true
+  comments = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[permalinks]
+  posts = "/posts/:year/:month/:slug/"
